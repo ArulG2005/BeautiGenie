@@ -28,7 +28,7 @@ function App() {
 
     try {
       
-      const response = await fetch('http://localhost:8080/api/chat', {
+      const response = await fetch('https://beauti-genie-git-main-arul-gs-projects.vercel.app/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

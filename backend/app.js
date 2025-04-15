@@ -11,7 +11,9 @@ require('./config/db');
 
 app.use(bodyParser.json());
 app.use(cors());
-
+app.get('/',(req,res)=>{
+res.send("hello haii");
+})
 app.use('/api/users', userRoutes);
 app.use('/api/chat', chatRoutes);
 

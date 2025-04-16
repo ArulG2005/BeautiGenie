@@ -10,7 +10,17 @@ const app = express();
 require('./config/db');
 
 app.use(bodyParser.json());
+const corsOptions = {
+  origin: [
+    'https://beauti-genie.vercel.app',
+    'http://localhost:3000',
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
 
+app.use(cors(corsOptions));
 app.get('/',(req,res)=>{
 res.send("hello haii");
 })
